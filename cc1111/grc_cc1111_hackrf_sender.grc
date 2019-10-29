@@ -1,39 +1,68 @@
-<?xml version='1.0' encoding='ASCII'?>
+<?xml version='1.0' encoding='utf-8'?>
+<?grc format='1' created='3.7.9'?>
 <flow_graph>
   <timestamp>Fri Jul 25 16:21:59 2014</timestamp>
   <block>
     <key>options</key>
     <param>
-      <key>id</key>
-      <value>grc_cc1111_hackrf_sender</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>grc_cc1111_hackrf_sender</value>
-    </param>
-    <param>
       <key>author</key>
       <value>Jerome Nokin</value>
-    </param>
-    <param>
-      <key>description</key>
-      <value></value>
     </param>
     <param>
       <key>window_size</key>
       <value>1280, 1024</value>
     </param>
     <param>
-      <key>generate_options</key>
-      <value>no_gui</value>
-    </param>
-    <param>
       <key>category</key>
       <value>Custom</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>description</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(10, 10)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>wx_gui</value>
+    </param>
+    <param>
+      <key>hier_block_src_path</key>
+      <value>.:</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>grc_cc1111_hackrf_sender</value>
+    </param>
+    <param>
+      <key>max_nouts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>qt_qss_theme</key>
+      <value></value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>run_command</key>
+      <value>{python} -u {filename}</value>
     </param>
     <param>
       <key>run_options</key>
@@ -44,205 +73,23 @@
       <value>True</value>
     </param>
     <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
+      <key>thread_safe_setters</key>
       <value></value>
     </param>
     <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(10, 10)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
+      <key>title</key>
+      <value>grc_cc1111_hackrf_sender</value>
     </param>
   </block>
   <block>
     <key>variable</key>
     <param>
-      <key>id</key>
-      <value>frequency</value>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>433.6e6</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(224, 75)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>2e6</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(225, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>symbole_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>40000</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(516, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>bit_per_sym</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(747, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>preamble</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>'0101010101010101'</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(347, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>samp_per_sym</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>int(samp_rate / symbole_rate)</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(627, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>access_code</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>'11010011100100011101001110010001'</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -252,24 +99,78 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>id</key>
+      <value>access_code</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>'11010011100100011101001110010001'</value>
+    </param>
   </block>
   <block>
     <key>variable</key>
     <param>
-      <key>id</key>
-      <value>myqueue_in</value>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>value</key>
-      <value>gr.msg_queue(2)</value>
+      <key>_coordinate</key>
+      <value>(747, 8)</value>
     </param>
     <param>
-      <key>alias</key>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>bit_per_sym</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
       <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(224, 75)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>433.6e6</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -279,51 +180,139 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
-  </block>
-  <block>
-    <key>cc1111_cc1111_packet_encoder</key>
     <param>
       <key>id</key>
-      <value>cc1111_cc1111_packet_encoder_0</value>
+      <value>myqueue_in</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>gr.msg_queue(2)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>source_queue</key>
-      <value>myqueue_in</value>
+      <key>_coordinate</key>
+      <value>(347, 8)</value>
     </param>
     <param>
-      <key>samples_per_symbol</key>
-      <value>samp_per_sym</value>
+      <key>_rotation</key>
+      <value>0</value>
     </param>
     <param>
-      <key>bits_per_symbol</key>
-      <value>bit_per_sym</value>
-    </param>
-    <param>
-      <key>preamble</key>
+      <key>id</key>
       <value>preamble</value>
     </param>
     <param>
+      <key>value</key>
+      <value>'0101010101010101'</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(627, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>samp_per_sym</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>int(samp_rate / symbole_rate)</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(225, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>2e6</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(516, 8)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>symbole_rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>800</value>
+    </param>
+  </block>
+  <block>
+    <key>blks2_packet_encoder</key>
+    <param>
       <key>access_code</key>
-      <value>access_code</value>
+      <value>010101</value>
     </param>
     <param>
-      <key>pad_for_usrp</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>do_whitening</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>add_crc</key>
-      <value>True</value>
+      <key>bits_per_symbol</key>
+      <value>1</value>
     </param>
     <param>
       <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
       <value></value>
     </param>
     <param>
@@ -331,11 +320,133 @@
       <value></value>
     </param>
     <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(304, 377)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blks2_packet_encoder_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
       <key>minoutbuf</key>
       <value>0</value>
     </param>
     <param>
+      <key>pad_for_usrp</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>payload_length</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>preamble</key>
+      <value></value>
+    </param>
+    <param>
+      <key>samples_per_symbol</key>
+      <value>int(samp_per_sym)</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/bkbilly/Desktop/input_File</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(48, 381)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_file_source_0</value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>cc1111_cc1111_packet_encoder</key>
+    <param>
+      <key>access_code</key>
+      <value>access_code</value>
+    </param>
+    <param>
+      <key>add_crc</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>bits_per_symbol</key>
+      <value>bit_per_sym</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>0</value>
     </param>
     <param>
@@ -346,59 +457,422 @@
       <key>_rotation</key>
       <value>0</value>
     </param>
-  </block>
-  <block>
-    <key>osmosdr_sink</key>
     <param>
       <key>id</key>
-      <value>osmosdr_sink_0</value>
+      <value>cc1111_cc1111_packet_encoder_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>pad_for_usrp</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>preamble</key>
+      <value>preamble</value>
+    </param>
+    <param>
+      <key>samples_per_symbol</key>
+      <value>samp_per_sym</value>
+    </param>
+    <param>
+      <key>source_queue</key>
+      <value>myqueue_in</value>
+    </param>
+    <param>
+      <key>do_whitening</key>
+      <value>True</value>
+    </param>
+  </block>
+  <block>
+    <key>digital_gmsk_mod</key>
+    <param>
+      <key>bt</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>type</key>
-      <value>fc32</value>
+      <key>_coordinate</key>
+      <value>(592, 309)</value>
     </param>
     <param>
-      <key>args</key>
-      <value>hackrf</value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>sample_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>freq0</key>
-      <value>frequency</value>
-    </param>
-    <param>
-      <key>corr0</key>
+      <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
-      <key>gain0</key>
-      <value>10</value>
+      <key>id</key>
+      <value>digital_gmsk_mod_0</value>
     </param>
     <param>
-      <key>if_gain0</key>
-      <value>20</value>
+      <key>log</key>
+      <value>False</value>
     </param>
     <param>
-      <key>bb_gain0</key>
-      <value>20</value>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samples_per_symbol</key>
+      <value>int(samp_per_sym)</value>
+    </param>
+    <param>
+      <key>verbose</key>
+      <value>False</value>
+    </param>
+  </block>
+  <block>
+    <key>osmosdr_sink</key>
+    <param>
+      <key>alias</key>
+      <value></value>
     </param>
     <param>
       <key>ant0</key>
       <value></value>
     </param>
     <param>
+      <key>bb_gain0</key>
+      <value>40</value>
+    </param>
+    <param>
       <key>bw0</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr0</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq0</key>
+      <value>frequency</value>
+    </param>
+    <param>
+      <key>if_gain0</key>
+      <value>40</value>
+    </param>
+    <param>
+      <key>gain0</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>ant10</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain10</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr10</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq10</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain10</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain10</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant11</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain11</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr11</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq11</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain11</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain11</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant12</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain12</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr12</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq12</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain12</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain12</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant13</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain13</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr13</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq13</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain13</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain13</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant14</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain14</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr14</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq14</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain14</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain14</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant15</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain15</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr15</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq15</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain15</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain15</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant16</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain16</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr16</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq16</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain16</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain16</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant17</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain17</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr17</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq17</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain17</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain17</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant18</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain18</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr18</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq18</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain18</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain18</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant19</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain19</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr19</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq19</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain19</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain19</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain1</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw1</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr1</key>
       <value>0</value>
     </param>
     <param>
@@ -406,27 +880,307 @@
       <value>100e6</value>
     </param>
     <param>
-      <key>corr1</key>
-      <value>0</value>
+      <key>if_gain1</key>
+      <value>20</value>
     </param>
     <param>
       <key>gain1</key>
       <value>10</value>
     </param>
     <param>
-      <key>if_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain1</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant1</key>
+      <key>ant20</key>
       <value></value>
     </param>
     <param>
-      <key>bw1</key>
+      <key>bb_gain20</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw20</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr20</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq20</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain20</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain20</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant21</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain21</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw21</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr21</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq21</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain21</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain21</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant22</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain22</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw22</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr22</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq22</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain22</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain22</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant23</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain23</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw23</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr23</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq23</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain23</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain23</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant24</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain24</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw24</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr24</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq24</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain24</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain24</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant25</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain25</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw25</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr25</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq25</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain25</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain25</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant26</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain26</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw26</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr26</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq26</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain26</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain26</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant27</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain27</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw27</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr27</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq27</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain27</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain27</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant28</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain28</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw28</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr28</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq28</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain28</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain28</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant29</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain29</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw29</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr29</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq29</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain29</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain29</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain2</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw2</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr2</key>
       <value>0</value>
     </param>
     <param>
@@ -434,27 +1188,83 @@
       <value>100e6</value>
     </param>
     <param>
-      <key>corr2</key>
-      <value>0</value>
+      <key>if_gain2</key>
+      <value>20</value>
     </param>
     <param>
       <key>gain2</key>
       <value>10</value>
     </param>
     <param>
-      <key>if_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain2</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant2</key>
+      <key>ant30</key>
       <value></value>
     </param>
     <param>
-      <key>bw2</key>
+      <key>bb_gain30</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw30</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr30</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq30</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain30</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain30</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant31</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain31</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw31</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr31</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq31</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain31</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain31</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain3</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw3</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr3</key>
       <value>0</value>
     </param>
     <param>
@@ -462,27 +1272,27 @@
       <value>100e6</value>
     </param>
     <param>
-      <key>corr3</key>
-      <value>0</value>
+      <key>if_gain3</key>
+      <value>20</value>
     </param>
     <param>
       <key>gain3</key>
       <value>10</value>
     </param>
     <param>
-      <key>if_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain3</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant3</key>
+      <key>ant4</key>
       <value></value>
     </param>
     <param>
-      <key>bw3</key>
+      <key>bb_gain4</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw4</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr4</key>
       <value>0</value>
     </param>
     <param>
@@ -490,31 +1300,155 @@
       <value>100e6</value>
     </param>
     <param>
-      <key>corr4</key>
-      <value>0</value>
+      <key>if_gain4</key>
+      <value>20</value>
     </param>
     <param>
       <key>gain4</key>
       <value>10</value>
     </param>
     <param>
-      <key>if_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>bb_gain4</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>ant4</key>
+      <key>ant5</key>
       <value></value>
     </param>
     <param>
-      <key>bw4</key>
+      <key>bb_gain5</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw5</key>
       <value>0</value>
     </param>
     <param>
-      <key>alias</key>
+      <key>corr5</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq5</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain5</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain5</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain6</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr6</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq6</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain6</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain6</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain7</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr7</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq7</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain7</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain7</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant8</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain8</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr8</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq8</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain8</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain8</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>ant9</key>
+      <value></value>
+    </param>
+    <param>
+      <key>bb_gain9</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>bw9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>corr9</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>freq9</key>
+      <value>100e6</value>
+    </param>
+    <param>
+      <key>if_gain9</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>gain9</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>comment</key>
       <value></value>
     </param>
     <param>
@@ -522,42 +1456,130 @@
       <value></value>
     </param>
     <param>
-      <key>_coordinate</key>
-      <value>(685, 166)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_gmsk_mod</key>
-    <param>
-      <key>id</key>
-      <value>digital_gmsk_mod_0</value>
+      <key>args</key>
+      <value>hackrf</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>samples_per_symbol</key>
-      <value>int(samp_per_sym)</value>
+      <key>_coordinate</key>
+      <value>(848, 386)</value>
     </param>
     <param>
-      <key>bt</key>
-      <value>0.5</value>
+      <key>_rotation</key>
+      <value>0</value>
     </param>
     <param>
-      <key>verbose</key>
+      <key>id</key>
+      <value>osmosdr_sink_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>fc32</value>
+    </param>
+    <param>
+      <key>clock_source0</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source0</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source1</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source2</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source3</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source4</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source5</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source6</key>
+      <value></value>
+    </param>
+    <param>
+      <key>clock_source7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>time_source7</key>
+      <value></value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_mboards</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>sample_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>sync</key>
+      <value></value>
+    </param>
+  </block>
+  <block>
+    <key>wxgui_waterfallsink2</key>
+    <param>
+      <key>avg_alpha</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>average</key>
       <value>False</value>
     </param>
     <param>
-      <key>log</key>
-      <value>False</value>
+      <key>baseband_freq</key>
+      <value>frequency</value>
     </param>
     <param>
       <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
       <value></value>
     </param>
     <param>
@@ -565,22 +1587,92 @@
       <value></value>
     </param>
     <param>
-      <key>minoutbuf</key>
-      <value>0</value>
+      <key>dynamic_range</key>
+      <value>100</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fft_rate</key>
+      <value>15</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>5120</value>
+    </param>
+    <param>
+      <key>freqvar</key>
+      <value>None</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(380, 206)</value>
+      <value>(928, 157)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>wxgui_waterfallsink2_0_1</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>ref_scale</key>
+      <value>2.0</value>
+    </param>
+    <param>
+      <key>ref_level</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Source</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>win_size</key>
+      <value></value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>window.rectangular</value>
+    </param>
   </block>
+  <connection>
+    <source_block_id>blks2_packet_encoder_0</source_block_id>
+    <sink_block_id>digital_gmsk_mod_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_file_source_0</source_block_id>
+    <sink_block_id>blks2_packet_encoder_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>cc1111_cc1111_packet_encoder_0</source_block_id>
+    <sink_block_id>digital_gmsk_mod_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
   <connection>
     <source_block_id>digital_gmsk_mod_0</source_block_id>
     <sink_block_id>osmosdr_sink_0</sink_block_id>
@@ -588,8 +1680,8 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>cc1111_cc1111_packet_encoder_0</source_block_id>
-    <sink_block_id>digital_gmsk_mod_0</sink_block_id>
+    <source_block_id>digital_gmsk_mod_0</source_block_id>
+    <sink_block_id>wxgui_waterfallsink2_0_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

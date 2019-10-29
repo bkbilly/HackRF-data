@@ -43,7 +43,7 @@ if __name__ == '__main__':
             print "[hackrf send] : '%s'" % (tosend)
             rf.myqueue_in.insert_tail(msg)
 
-            sleep(1)
+            sleep(3)
 
     except KeyboardInterrupt:
         print("W: interrupt received, proceeding")

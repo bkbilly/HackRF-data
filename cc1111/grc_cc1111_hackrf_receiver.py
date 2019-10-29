@@ -4,7 +4,7 @@
 # GNU Radio Python Flow Graph
 # Title: grc_cc1111_hackrf_receiver
 # Author: Jerome Nokin
-# Generated: Tue Oct 15 11:39:57 2019
+# Generated: Thu Oct 24 12:28:35 2019
 ##################################################
 
 if __name__ == '__main__':
@@ -28,9 +28,9 @@ from gnuradio.eng_option import eng_option
 from gnuradio.fft import window
 from gnuradio.filter import firdes
 from gnuradio.wxgui import waterfallsink2
+from grc_gnuradio import blks2 as grc_blks2
 from grc_gnuradio import wxgui as grc_wxgui
 from optparse import OptionParser
-import cc1111
 import math
 import osmosdr
 import time
@@ -47,18 +47,18 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         ##################################################
         # Variables
         ##################################################
-        self.symbole_rate = symbole_rate = 40000
+        self.symbole_rate = symbole_rate = 80000
         self.samp_rate = samp_rate = 2e06
+        self.firdes_transition_width = firdes_transition_width = 15000
+        self.firdes_cuttoff = firdes_cuttoff = 21e3
+        self.samp_per_sym = samp_per_sym = int(samp_rate / symbole_rate)
         self.rat_interop = rat_interop = 8
         self.rat_decim = rat_decim = 5
-        self.firdes_transition_width = firdes_transition_width = 15000
-        self.firdes_decim = firdes_decim = 4
-        self.firdes_cuttoff = firdes_cuttoff = 21e3
-        self.samp_per_sym = samp_per_sym = ((samp_rate/2/firdes_decim)*rat_interop/rat_decim) / symbole_rate
         self.myqueue_out = myqueue_out = gr.msg_queue(2)
         self.frequency_shift = frequency_shift = 520000
-        self.frequency_center = frequency_center = 433.0e06
+        self.frequency_center = frequency_center = 433.6e06
         self.firdes_filter = firdes_filter = firdes.low_pass(1,samp_rate/2, firdes_cuttoff, firdes_transition_width)
+        self.firdes_decim = firdes_decim = 4
         self.access_code = access_code = '11010011100100011101001110010001'
 
         ##################################################
@@ -66,7 +66,7 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         ##################################################
         self.wxgui_waterfallsink2_0_1 = waterfallsink2.waterfall_sink_c(
         	self.GetWin(),
-        	baseband_freq=433610000,
+        	baseband_freq=frequency_center,
         	dynamic_range=100,
         	ref_level=0,
         	ref_scale=2.0,
@@ -79,24 +79,9 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         	win=window.rectangular,
         )
         self.Add(self.wxgui_waterfallsink2_0_1.win)
-        self.wxgui_waterfallsink2_0_0 = waterfallsink2.waterfall_sink_f(
-        	self.GetWin(),
-        	baseband_freq=433610000,
-        	dynamic_range=100,
-        	ref_level=0,
-        	ref_scale=2.0,
-        	sample_rate=samp_rate,
-        	fft_size=5120,
-        	fft_rate=15,
-        	average=False,
-        	avg_alpha=None,
-        	title="Clock",
-        	win=window.rectangular,
-        )
-        self.Add(self.wxgui_waterfallsink2_0_0.win)
         self.wxgui_waterfallsink2_0 = waterfallsink2.waterfall_sink_c(
         	self.GetWin(),
-        	baseband_freq=433610000,
+        	baseband_freq=frequency_center,
         	dynamic_range=100,
         	ref_level=0,
         	ref_scale=2.0,
@@ -105,7 +90,7 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         	fft_rate=15,
         	average=False,
         	avg_alpha=None,
-        	title="Throtle",
+        	title="Filter",
         	win=window.rectangular,
         )
         self.Add(self.wxgui_waterfallsink2_0.win)
@@ -122,34 +107,37 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         self.osmosdr_source_0.set_dc_offset_mode(0, 0)
         self.osmosdr_source_0.set_iq_balance_mode(0, 0)
         self.osmosdr_source_0.set_gain_mode(False, 0)
-        self.osmosdr_source_0.set_gain(10, 0)
-        self.osmosdr_source_0.set_if_gain(20, 0)
-        self.osmosdr_source_0.set_bb_gain(20, 0)
+        self.osmosdr_source_0.set_gain(20, 0)
+        self.osmosdr_source_0.set_if_gain(40, 0)
+        self.osmosdr_source_0.set_bb_gain(40, 0)
         self.osmosdr_source_0.set_antenna("", 0)
         self.osmosdr_source_0.set_bandwidth(0, 0)
           
         self.freq_xlating_fir_filter_xxx_1 = filter.freq_xlating_fir_filter_ccc(2, (1, ), frequency_shift, samp_rate)
         self.freq_xlating_fir_filter_xxx_0_0 = filter.freq_xlating_fir_filter_ccc(firdes_decim, (firdes_filter), 0, samp_rate/2)
-        self.digital_correlate_access_code_bb_0_0 = digital.correlate_access_code_bb(access_code, 1)
         self.digital_clock_recovery_mm_xx_0_0 = digital.clock_recovery_mm_ff(samp_per_sym*(1+0.0), 0.25*0.175*0.175, 0.5, 0.175, 0.005)
         self.digital_binary_slicer_fb_0_0_0 = digital.binary_slicer_fb()
-        self.cc1111_cc1111_packet_decoder_0 = cc1111.cc1111_packet_decoder(myqueue_out,True, True, True, True)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate/2,True)
-        self.blocks_null_sink_0_0 = blocks.null_sink(gr.sizeof_char*1)
+        self.blocks_file_sink_0_0 = blocks.file_sink(gr.sizeof_float*1, "/home/bkbilly/Desktop/hello_out.txt", False)
+        self.blocks_file_sink_0_0.set_unbuffered(False)
+        self.blks2_packet_decoder_0 = grc_blks2.packet_demod_f(grc_blks2.packet_decoder(
+        		access_code="010101",
+        		threshold=-1,
+        		callback=lambda ok, payload: self.blks2_packet_decoder_0.recv_pkt(ok, payload),
+        	),
+        )
         self.analog_quadrature_demod_cf_0_0 = analog.quadrature_demod_cf(2)
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.analog_quadrature_demod_cf_0_0, 0), (self.digital_clock_recovery_mm_xx_0_0, 0))    
+        self.connect((self.blks2_packet_decoder_0, 0), (self.blocks_file_sink_0_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.freq_xlating_fir_filter_xxx_0_0, 0))    
-        self.connect((self.blocks_throttle_0, 0), (self.wxgui_waterfallsink2_0, 0))    
-        self.connect((self.cc1111_cc1111_packet_decoder_0, 0), (self.blocks_null_sink_0_0, 0))    
-        self.connect((self.digital_binary_slicer_fb_0_0_0, 0), (self.digital_correlate_access_code_bb_0_0, 0))    
+        self.connect((self.digital_binary_slicer_fb_0_0_0, 0), (self.blks2_packet_decoder_0, 0))    
         self.connect((self.digital_clock_recovery_mm_xx_0_0, 0), (self.digital_binary_slicer_fb_0_0_0, 0))    
-        self.connect((self.digital_clock_recovery_mm_xx_0_0, 0), (self.wxgui_waterfallsink2_0_0, 0))    
-        self.connect((self.digital_correlate_access_code_bb_0_0, 0), (self.cc1111_cc1111_packet_decoder_0, 0))    
         self.connect((self.freq_xlating_fir_filter_xxx_0_0, 0), (self.rational_resampler_xxx_0_0, 0))    
+        self.connect((self.freq_xlating_fir_filter_xxx_0_0, 0), (self.wxgui_waterfallsink2_0, 0))    
         self.connect((self.freq_xlating_fir_filter_xxx_1, 0), (self.blocks_throttle_0, 0))    
         self.connect((self.osmosdr_source_0, 0), (self.freq_xlating_fir_filter_xxx_1, 0))    
         self.connect((self.osmosdr_source_0, 0), (self.wxgui_waterfallsink2_0_1, 0))    
@@ -160,7 +148,7 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
 
     def set_symbole_rate(self, symbole_rate):
         self.symbole_rate = symbole_rate
-        self.set_samp_per_sym(((self.samp_rate/2/self.firdes_decim)*self.rat_interop/self.rat_decim) / self.symbole_rate)
+        self.set_samp_per_sym(int(self.samp_rate / self.symbole_rate))
 
     def get_samp_rate(self):
         return self.samp_rate
@@ -168,26 +156,11 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.set_firdes_filter(firdes.low_pass(1,self.samp_rate/2, self.firdes_cuttoff, self.firdes_transition_width))
-        self.set_samp_per_sym(((self.samp_rate/2/self.firdes_decim)*self.rat_interop/self.rat_decim) / self.symbole_rate)
+        self.set_samp_per_sym(int(self.samp_rate / self.symbole_rate))
         self.blocks_throttle_0.set_sample_rate(self.samp_rate/2)
-        self.wxgui_waterfallsink2_0_0.set_sample_rate(self.samp_rate)
+        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
         self.wxgui_waterfallsink2_0.set_sample_rate(self.samp_rate)
         self.wxgui_waterfallsink2_0_1.set_sample_rate(self.samp_rate)
-        self.osmosdr_source_0.set_sample_rate(self.samp_rate)
-
-    def get_rat_interop(self):
-        return self.rat_interop
-
-    def set_rat_interop(self, rat_interop):
-        self.rat_interop = rat_interop
-        self.set_samp_per_sym(((self.samp_rate/2/self.firdes_decim)*self.rat_interop/self.rat_decim) / self.symbole_rate)
-
-    def get_rat_decim(self):
-        return self.rat_decim
-
-    def set_rat_decim(self, rat_decim):
-        self.rat_decim = rat_decim
-        self.set_samp_per_sym(((self.samp_rate/2/self.firdes_decim)*self.rat_interop/self.rat_decim) / self.symbole_rate)
 
     def get_firdes_transition_width(self):
         return self.firdes_transition_width
@@ -195,13 +168,6 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
     def set_firdes_transition_width(self, firdes_transition_width):
         self.firdes_transition_width = firdes_transition_width
         self.set_firdes_filter(firdes.low_pass(1,self.samp_rate/2, self.firdes_cuttoff, self.firdes_transition_width))
-
-    def get_firdes_decim(self):
-        return self.firdes_decim
-
-    def set_firdes_decim(self, firdes_decim):
-        self.firdes_decim = firdes_decim
-        self.set_samp_per_sym(((self.samp_rate/2/self.firdes_decim)*self.rat_interop/self.rat_decim) / self.symbole_rate)
 
     def get_firdes_cuttoff(self):
         return self.firdes_cuttoff
@@ -217,6 +183,18 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
         self.samp_per_sym = samp_per_sym
         self.digital_clock_recovery_mm_xx_0_0.set_omega(self.samp_per_sym*(1+0.0))
 
+    def get_rat_interop(self):
+        return self.rat_interop
+
+    def set_rat_interop(self, rat_interop):
+        self.rat_interop = rat_interop
+
+    def get_rat_decim(self):
+        return self.rat_decim
+
+    def set_rat_decim(self, rat_decim):
+        self.rat_decim = rat_decim
+
     def get_myqueue_out(self):
         return self.myqueue_out
 
@@ -228,8 +206,8 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
 
     def set_frequency_shift(self, frequency_shift):
         self.frequency_shift = frequency_shift
-        self.osmosdr_source_0.set_center_freq(self.frequency_center-self.frequency_shift, 0)
         self.freq_xlating_fir_filter_xxx_1.set_center_freq(self.frequency_shift)
+        self.osmosdr_source_0.set_center_freq(self.frequency_center-self.frequency_shift, 0)
 
     def get_frequency_center(self):
         return self.frequency_center
@@ -237,6 +215,8 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
     def set_frequency_center(self, frequency_center):
         self.frequency_center = frequency_center
         self.osmosdr_source_0.set_center_freq(self.frequency_center-self.frequency_shift, 0)
+        self.wxgui_waterfallsink2_0.set_baseband_freq(self.frequency_center)
+        self.wxgui_waterfallsink2_0_1.set_baseband_freq(self.frequency_center)
 
     def get_firdes_filter(self):
         return self.firdes_filter
@@ -244,6 +224,12 @@ class grc_cc1111_hackrf_receiver(grc_wxgui.top_block_gui):
     def set_firdes_filter(self, firdes_filter):
         self.firdes_filter = firdes_filter
         self.freq_xlating_fir_filter_xxx_0_0.set_taps((self.firdes_filter))
+
+    def get_firdes_decim(self):
+        return self.firdes_decim
+
+    def set_firdes_decim(self, firdes_decim):
+        self.firdes_decim = firdes_decim
 
     def get_access_code(self):
         return self.access_code

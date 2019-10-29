@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>434.5e6</value>
+      <value>432.48e06</value>
     </param>
   </block>
   <block>
@@ -245,7 +245,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1546,7 +1546,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1665,7 +1665,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>fbw</key>
