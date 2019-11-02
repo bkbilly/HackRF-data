@@ -5,10 +5,16 @@
 The objective of this project is to transfer binary data from one HackRF One to another using a modulation for the transmitter and a demodulation on the receiver. 
 
 There are 3 basic types of modulations:
-
   - Frequency Modulation
   - Amplitude Modulation
   - Phase Modulation
+
+
+## Problems
+
+  - We need to use Ubuntu 16.04 as this is the distro that everyone is using in the Robot Community.
+  - In order to test the latest version of GNU Radio 3.8 which doesn't support this distro an installation of Ubuntu 18.04 is needed. The build of the newest version was successfully completed, but for the communication with the HackRF One an extra package had to be build from source `gr-osmosdr` which had build errors.
+  - HackRF is not that strong and for real life applications it needs a Signal Booster.
 
 
 ## Projects
@@ -27,7 +33,6 @@ Sends/Receives binary data from one HackRF to another. It needs compilation from
 
 ### OFDM
 A deferent approach on the receiver/transmitter problem which is using the official OFDM tx/rx examples. As a modulation it is using timeslots to send multiple signals at the same time.
-
 
 
 ## Installation
