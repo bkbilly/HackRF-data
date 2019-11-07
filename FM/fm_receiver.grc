@@ -152,7 +152,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>13</value>
+      <value>30</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1756,7 +1756,7 @@
     </param>
     <param>
       <key>args</key>
-      <value>hackrf=1</value>
+      <value>hackrf=0</value>
     </param>
     <param>
       <key>_enabled</key>
