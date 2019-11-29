@@ -21,12 +21,14 @@ There are 3 basic types of modulations:
 
 ### FM
 This contains a receiver that can graphically change frequency and a transmitter that gets a WAV audio file and sends it to a prespecified frequency. Created it so that we can check how each component of GNU-Radio works together.
+#### RDS
 
 ### wifi
 Checks the 2.4GHz WiFi signals. Created it so that we can check what kind of antena we need for a high frequency receiver.
 
 ### morse
-Works only on older versions of GNU Radio and contains a python block that reads the input message and transmits it as a morse code. This was the first attempt to send/receive data, though this approch has many problems and mostly because of the timing interval that has to be synchronized.
+Works only on older versions of GNU Radio and contains a python block that reads the input message and transmits it as a morse code. This was the first attempt to send/receive data, though this approch has many problems and mostly because of the timing interval that has to be synchronized. A way to run this is to save the raw data to a wav file and then have an external application decode the wav file. For noisy environments the morse code can be decoded with neural networks with this code: https://github.com/ag1le/LSTM_morse
+http://ag1le.blogspot.com/2019/02/training-computer-to-listen-and-decode.html
 
 ### cc1111
 Sends/Receives binary data from one HackRF to another. It needs compilation from source and the full documentation exists on the project README page.

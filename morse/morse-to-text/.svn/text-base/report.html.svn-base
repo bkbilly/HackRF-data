@@ -1,0 +1,18 @@
+<html>
+	<body>
+		<h1>Senal original</h1>
+		<img src="original.png"/>
+		<h1>Senal transformada</h1>
+		<img src="transformed.png"/>
+		<h1>Transformada filtrada</h1>
+		<img src="filtered_trans.png"/>
+		<h1>Senal filtrada</h1>
+		<img src="filtered_signal.png"/>
+		<h1>Spectrograma</h1>
+		<img src="spectrogram.png"/>
+		<h1>Pulses</h1>
+		<img src="presence.png"/>
+	</body>
+
+
+</html>

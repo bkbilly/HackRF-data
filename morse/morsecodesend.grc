@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>432.48e06</value>
+      <value>434.5e6</value>
     </param>
   </block>
   <block>
@@ -642,7 +642,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>bb_gain0</key>
-      <value>30</value>
+      <value>60</value>
     </param>
     <param>
       <key>bw0</key>
@@ -658,11 +658,11 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>if_gain0</key>
-      <value>30</value>
+      <value>60</value>
     </param>
     <param>
       <key>gain0</key>
-      <value>20</value>
+      <value>30</value>
     </param>
     <param>
       <key>ant10</key>
@@ -1638,7 +1638,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>sample_rate</key>
-      <value>hackRF_samp_rate</value>
+      <value>samp_rate</value>
     </param>
     <param>
       <key>sync</key>
@@ -1685,7 +1685,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>interp</key>
-      <value>int(hackRF_samp_rate/samp_rate)</value>
+      <value>10</value>
     </param>
     <param>
       <key>maxoutbuf</key>
