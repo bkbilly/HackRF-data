@@ -38,7 +38,7 @@
     </param>
     <param>
       <key>generate_options</key>
-      <value>wx_gui</value>
+      <value>qt_gui</value>
     </param>
     <param>
       <key>hier_block_src_path</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>top_block</value>
+      <value>morsecodesend</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -93,19 +93,19 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 23)</value>
+      <value>(8, 125)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>180</value>
+      <value>0</value>
     </param>
     <param>
       <key>id</key>
-      <value>hackRF_freq</value>
+      <value>FM_freq</value>
     </param>
     <param>
       <key>value</key>
-      <value>434.5e6</value>
+      <value>107.9e6</value>
     </param>
   </block>
   <block>
@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(496, 23)</value>
+      <value>(8, 189)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -132,7 +132,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>960e3</value>
+      <value>32e3</value>
     </param>
   </block>
   <block>
@@ -147,7 +147,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(624, 23)</value>
+      <value>(8, 253)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -159,7 +159,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>int(48e3)</value>
+      <value>int(32e3)</value>
     </param>
   </block>
   <block>
@@ -182,7 +182,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>freq</key>
@@ -190,7 +190,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 104)</value>
+      <value>(216, 120)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -226,6 +226,61 @@
     </param>
   </block>
   <block>
+    <key>analog_wfm_tx</key>
+    <param>
+      <key>audio_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(576, 223)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_wfm_tx_0</value>
+    </param>
+    <param>
+      <key>max_dev</key>
+      <value>15e3</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>quad_rate</key>
+      <value>samp_rate * 10</value>
+    </param>
+    <param>
+      <key>tau</key>
+      <value>5e-6</value>
+    </param>
+  </block>
+  <block>
     <key>audio_sink</key>
     <param>
       <key>alias</key>
@@ -245,11 +300,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 156)</value>
+      <value>(832, 132)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -288,11 +343,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(464, 159)</value>
+      <value>(536, 81)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -331,11 +386,11 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(336, 159)</value>
+      <value>(408, 81)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -364,6 +419,104 @@
     <param>
       <key>vlen</key>
       <value>1</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_wavfile_sink</key>
+    <param>
+      <key>bits_per_sample</key>
+      <value>8</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/bkbilly/Desktop/morse_original.wav</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(832, 182)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_wavfile_sink_0_0</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_wavfile_source</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/bkbilly/Documents/HackRF-data/FM/bensound-summer.wav</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(168, 237)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_wavfile_source_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -572,7 +725,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 247)</value>
+      <value>(192, 31)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -584,7 +737,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>samplerate</key>
-      <value>48000</value>
+      <value>samp_rate</value>
     </param>
     <param>
       <key>sleeptime</key>
@@ -596,7 +749,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>wpm</key>
-      <value>1</value>
+      <value>13</value>
     </param>
   </block>
   <block>
@@ -615,7 +768,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(264, 22)</value>
+      <value>(8, 68)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -642,27 +795,27 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>bb_gain0</key>
-      <value>60</value>
-    </param>
-    <param>
-      <key>bw0</key>
       <value>0</value>
     </param>
     <param>
+      <key>bw0</key>
+      <value>1024</value>
+    </param>
+    <param>
       <key>corr0</key>
-      <value>7</value>
+      <value>0</value>
     </param>
     <param>
       <key>freq0</key>
-      <value>hackRF_freq</value>
+      <value>FM_freq</value>
     </param>
     <param>
       <key>if_gain0</key>
-      <value>60</value>
+      <value>0</value>
     </param>
     <param>
       <key>gain0</key>
-      <value>30</value>
+      <value>0</value>
     </param>
     <param>
       <key>ant10</key>
@@ -1550,7 +1703,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(384, 393)</value>
+      <value>(832, 362)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1558,7 +1711,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>id</key>
-      <value>osmosdr_sink_0</value>
+      <value>osmosdr_sink_0_0</value>
     </param>
     <param>
       <key>type</key>
@@ -1638,11 +1791,169 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>sample_rate</key>
-      <value>samp_rate</value>
+      <value>hackRF_samp_rate</value>
     </param>
     <param>
       <key>sync</key>
       <value></value>
+    </param>
+  </block>
+  <block>
+    <key>qtgui_sink_x</key>
+    <param>
+      <key>bw</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>fc</key>
+      <value>FM_freq</value>
+    </param>
+    <param>
+      <key>freqchangevar</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fftsize</key>
+      <value>2048</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(832, 271)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>qtgui_sink_x_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>name</key>
+      <value>""</value>
+    </param>
+    <param>
+      <key>plotconst</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>plotfreq</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>plottime</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>plotwaterfall</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>showports</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>showrf</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>rate</key>
+      <value>10</value>
+    </param>
+    <param>
+      <key>wintype</key>
+      <value>firdes.WIN_BLACKMAN_hARRIS</value>
+    </param>
+  </block>
+  <block>
+    <key>rational_resampler_xxx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>decim</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>fbw</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(592, 327)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>rational_resampler_xxx_0</value>
+    </param>
+    <param>
+      <key>interp</key>
+      <value>4</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>taps</key>
+      <value></value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>ccc</value>
     </param>
   </block>
   <block>
@@ -1669,7 +1980,7 @@ class morsecode_enc(gr.sync_block):
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 226)</value>
+      <value>(832, 17)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1732,197 +2043,33 @@ class morsecode_enc(gr.sync_block):
       <value>Counts</value>
     </param>
   </block>
-  <block>
-    <key>wxgui_scopesink2</key>
-    <param>
-      <key>ac_couple</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(552, 233)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>wxgui_scopesink2_0_0</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>t_scale</key>
-      <value>0.01</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Scope Plot</value>
-    </param>
-    <param>
-      <key>trig_mode</key>
-      <value>wxgui.TRIG_MODE_AUTO</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>v_offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>v_scale</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>xy_mode</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>Counts</value>
-    </param>
-  </block>
-  <block>
-    <key>wxgui_waterfallsink2</key>
-    <param>
-      <key>avg_alpha</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>average</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>baseband_freq</key>
-      <value>hackRF_freq</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>dynamic_range</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>fft_rate</key>
-      <value>15</value>
-    </param>
-    <param>
-      <key>fft_size</key>
-      <value>512</value>
-    </param>
-    <param>
-      <key>freqvar</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(96, 436)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>wxgui_waterfallsink2_0</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>ref_scale</key>
-      <value>2.0</value>
-    </param>
-    <param>
-      <key>ref_level</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Waterfall Plot</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>None</value>
-    </param>
-  </block>
   <connection>
     <source_block_id>analog_sig_source_x_0</source_block_id>
     <sink_block_id>blocks_multiply_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_wfm_tx_0</source_block_id>
+    <sink_block_id>rational_resampler_xxx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>analog_wfm_tx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>blocks_complex_to_float_0</source_block_id>
     <sink_block_id>audio_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>blocks_wavfile_sink_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1939,26 +2086,26 @@ class morsecode_enc(gr.sync_block):
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_wavfile_source_0</source_block_id>
+    <sink_block_id>analog_wfm_tx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>epy_block_0</source_block_id>
     <sink_block_id>blocks_multiply_xx_0</sink_block_id>
     <source_key>0</source_key>
-    <sink_key>1</sink_key>
+    <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>epy_block_0</source_block_id>
-    <sink_block_id>osmosdr_sink_0</sink_block_id>
+    <source_block_id>rational_resampler_xxx_0</source_block_id>
+    <sink_block_id>osmosdr_sink_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>epy_block_0</source_block_id>
-    <sink_block_id>wxgui_scopesink2_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>epy_block_0</source_block_id>
-    <sink_block_id>wxgui_waterfallsink2_0</sink_block_id>
+    <source_block_id>rational_resampler_xxx_0</source_block_id>
+    <sink_block_id>qtgui_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
